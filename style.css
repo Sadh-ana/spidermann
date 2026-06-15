@@ -1,0 +1,25 @@
+body{
+margin:0;background:#050505;color:white;font-family:Orbitron,sans-serif;overflow:hidden;
+}
+#particles{position:fixed;inset:0;z-index:-1;}
+.screen{display:none;height:100vh;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px;}
+.active{display:flex;}
+button{padding:14px 28px;border:none;border-radius:999px;background:#d61f2c;color:white;font-weight:bold;cursor:pointer;}
+button:hover{transform:scale(1.05);}
+.card{background:rgba(255,255,255,.08);backdrop-filter:blur(8px);padding:30px;border:1px solid #d61f2c;border-radius:20px;}
+.wide{max-width:700px;}
+.glitch{font-size:4rem;animation:g 1s infinite;}
+@keyframes g{
+25%{transform:translate(2px,-2px);}50%{transform:translate(-2px,2px);}75%{transform:translate(2px,2px);}
+}
+.portal{
+position:absolute;width:260px;height:260px;border-radius:50%;
+border:8px solid #00bfff;box-shadow:0 0 40px #00bfff;
+animation:spin 10s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.ticket{
+background:white;color:black;padding:40px;border-radius:20px;
+transform:rotate(-2deg);box-shadow:0 0 40px white;
+}
+#countdown{font-size:1.5rem;color:#ffd54f;margin:20px 0;}

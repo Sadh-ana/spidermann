@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Sparkles</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div id="particles"></div>
+
+<section class="screen active" id="loading">
+  <h1 class="glitch">MULTIVERSE ALERT</h1>
+  <h2 id="typewriter"></h2>
+  <button id="beginBtn">ACCESS FILE</button>
+</section>
+
+<section class="screen" id="profile">
+  <div class="card">
+    <h1>AGENT SPARKLES</h1>
+    <p>Coolness: 100%</p>
+    <p>Movie Taste: Elite</p>
+    <p>Importance To Multiverse: Critical</p>
+    <button id="continueBtn">OPEN MISSION</button>
+  </div>
+</section>
+
+<section class="screen" id="story">
+  <div class="card wide">
+    <h1>SPIDER SOCIETY DATABASE</h1>
+    <p>Four years after No Way Home...</p>
+    <p>Peter Parker stands alone.</p>
+    <p>The city remembers Spider-Man.</p>
+    <p>But not the boy behind the mask.</p>
+    <p>One unresolved mission remains...</p>
+    <button id="revealBtn">ACCESS FINAL FILE</button>
+  </div>
+</section>
+
+<section class="screen" id="reveal">
+  <div class="portal"></div>
+  <div class="card wide">
+    <h1>SPIDER-MAN: BRAND NEW DAY</h1>
+    <p>July 30, 2026 • India First Release</p>
+    <div id="countdown"></div>
+    <p>Across billions of timelines...</p>
+    <p>There was one I kept returning to.</p>
+    <p>The one where Sparkles and Sprinkles watched Spider-Man together.</p>
+    <h2>Sparkles...</h2>
+    <p>This isn't a Spider Society mission.</p>
+    <p>This is Sprinkles asking something important.</p>
+    <button id="yesBtn">🕷 WILL YOU WATCH IT WITH ME?</button>
+  </div>
+</section>
+
+<section class="screen" id="accepted">
+  <div class="ticket">
+    <h1>MISSION ACCEPTED</h1>
+    <h2>ADMIT TWO</h2>
+    <p>SPARKLES + SPRINKLES</p>
+    <p>Spider-Man: Brand New Day</p>
+    <p>July 30, 2026</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
