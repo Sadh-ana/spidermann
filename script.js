@@ -1,33 +1,47 @@
-const qs=s=>document.querySelector(s);
+const screens=document.querySelectorAll(".screen");
+
 function show(id){
-document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
-qs('#'+id).classList.add('active');
+screens.forEach(s=>s.classList.remove("active"));
+document.getElementById(id).classList.add("active");
 }
-const text='Incoming Transmission From Earth-SPARKLES';
-let i=0;
-(function type(){
- if(i<text.length){qs('#typewriter').textContent+=text[i++];setTimeout(type,50);}
-})();
 
-qs('#beginBtn').onclick=()=>show('profile');
-qs('#continueBtn').onclick=()=>show('story');
-qs('#revealBtn').onclick=()=>show('reveal');
+beginBtn.onclick=()=>show("mission");
+continueBtn.onclick=()=>show("profile");
+nextBtn.onclick=()=>show("story");
+revealBtn.onclick=()=>show("reveal");
+yesBtn.onclick=()=>show("accepted");
 
-qs('#yesBtn').onclick=()=>{
- confetti({particleCount:250,spread:180});
- show('accepted');
-};
+function updateCountdown(){
 
-function update(){
- const target=new Date('2026-07-30');
- const diff=target-new Date();
- const d=Math.max(0,Math.floor(diff/86400000));
- const el=qs('#countdown');
- if(el) el.textContent=d+' days until mission day';
+const target=new Date("July 30, 2026");
+
+const now=new Date();
+
+const diff=target-now;
+
+const days=Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("countdown").innerHTML=
+`${days} days until mission day`;
 }
-setInterval(update,1000); update();
 
-tsParticles.load('particles',{
- particles:{number:{value:80},move:{enable:true,speed:1},size:{value:2}}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+let clicks=0;
+
+document.addEventListener("click",e=>{
+
+if(e.target.classList.contains("bigTitle")){
+
+clicks++;
+
+if(clicks===3){
+
+alert(
+"CLASSIFIED FILE\n\nTruth be told...\nSprinkles was looking for an excuse to spend the day with Sparkles anyway."
+);
+
+}
+}
 });
-
