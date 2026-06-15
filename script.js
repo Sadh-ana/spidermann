@@ -30,3 +30,4 @@ setInterval(update,1000); update();
 tsParticles.load('particles',{
  particles:{number:{value:80},move:{enable:true,speed:1},size:{value:2}}
 });
+
